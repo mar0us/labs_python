@@ -42,15 +42,16 @@ def task4():
 def task5():
     l = [5, 2, 3, 4, 5, 6]
     res = [l[i] for i in range(1, len(l)) if l[i] > l[i-1]]
-    print(" ".join([str(el) for el in res]))
+    print("исходный список: " + " ".join([str(el) for el in l]))
+    print("итоговый: " + " ".join([str(el) for el in res]))
 
-
-task5()
+# task5()
 
 def task6():
     l = [-1, 2, -3, -5, -5, 6]
     for i in range(1, len(l)):
         if l[i]/fabs(l[i]) == l[i-1]/fabs(l[i-1]):
+            print("исходный список: " + " ".join([str(el) for el in l]))
             print(f"пара: {l[i-1]} {l[i]}")
             break
 
@@ -58,7 +59,6 @@ def task6():
 
 def task7():
     l = [5, 2, 3, 4, 5, 6, 1]
-    # res = [l[::2], l[1::2]]
     res = []
     for i in range(0, len(l), 2):
         if i+1 >= len(l):
@@ -66,13 +66,16 @@ def task7():
             break
         res.append(l[i+1])
         res.append(l[i])
-    print(" ".join([str(el) for el in res]))
+    print("исходный список: " + " ".join([str(el) for el in l]))
+    print("итоговый: " + " ".join([str(el) for el in res]))
 
 # task7()
 
 def task8():
     l = [5, 2, 3, 4, 5, 6, 1]
     res = [el for el in l if l.count(el) == 1]
-    print(res)
 
-# task8()
+    print("исходный список: " + " ".join([str(el) for el in l]))
+    print("итоговый: " + " ".join([str(el) for el in res]))
+
+task8()
